@@ -2,7 +2,7 @@ import tkinter as tk
 
 window =tk.Tk()
 
-def fechar():
+def fechar(event=None):
     window.destroy()
 
 window.overrideredirect(True)
@@ -15,7 +15,7 @@ entry.pack(expand=True, padx=20, pady=20)
 
 entry.focus()
 
-window.bind("<Escape>", fechar())
+window.bind("<Escape>", fechar)
 
 
 window.mainloop()

@@ -1,6 +1,10 @@
 import tkinter as tk
 
 window =tk.Tk()
+
+def fechar():
+    window.destroy()
+
 window.overrideredirect(True)
 
 window.attributes("-topmost", True)
@@ -11,6 +15,7 @@ entry.pack(expand=True, padx=20, pady=20)
 
 entry.focus()
 
-window.bind("<Escape>", lambda e: window.destroy())
+window.bind("<Escape>", fechar())
+
 
 window.mainloop()
